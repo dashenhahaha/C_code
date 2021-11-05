@@ -1570,37 +1570,56 @@ int main() {
         }
         printf("%d", d);
         return 0;
-    }
-}*/
+////////    }
+////////}*/
+////////#include<stdio.h>
+////////#include<math.h>
+////////int main() {
+////////	int n, t, a, d, m;
+////////	double b, ro;
+////////	scanf("%d %d %lf", &n, &t, &ro);
+////////	if (n > 330000000) printf("MAGA? Bazinga!!");
+////////	else if (n <= 330000000) {
+////////		if (10 <= t && t < 20) {
+////////			m = ro / 2.0;
+////////			b = n * pow(ro, 10) * pow(m, n - 10);
+////////			printf("%.lf", b);
+////////		}
+////////		else if (t < 10) {
+////////			b = n * pow(ro, n);
+////////			printf("%.lf", b);
+////////		}
+////////		else if (n >= 20) {
+////////			a = t / 10;
+////////			if (a % 2 == 0) {
+////////				d = a / 2;
+////////				b = n * pow(pow(ro, 10), d) * pow(pow(ro / 2.0, 10), d);
+////////			}
+////////			else if (a % 2 != 0) {
+////////				d = a / 2;
+////////				b = n * pow(pow(ro, 10), d) * pow(pow(ro / 2.0, 10), d - 1) * pow(ro, n % 10);
+////////			}
+////////			printf("%.lf", b);
+////////		}
+////////	}
+////////	return 0;
+////////}
+
 #include<stdio.h>
-#include<math.h>
 int main() {
-	int n, t, a, d, m;
-	double b, ro;
-	scanf("%d %d %lf", &n, &t, &ro);
-	if (n > 330000000) printf("MAGA? Bazinga!!");
-	else if (n <= 330000000) {
-		if (10 <= t && t < 20) {
-			m = ro / 2.0;
-			b = n * pow(ro, 10) * pow(m, n - 10);
-			printf("%.lf", b);
-		}
-		else if (t < 10) {
-			b = n * pow(ro, n);
-			printf("%.lf", b);
-		}
-		else if (n >= 20) {
-			a = t / 10;
-			if (a % 2 == 0) {
-				d = a / 2;
-				b = n * pow(pow(ro, 10), d) * pow(pow(ro / 2.0, 10), d);
-			}
-			else if (a % 2 != 0) {
-				d = a / 2;
-				b = n * pow(pow(ro, 10), d) * pow(pow(ro / 2.0, 10), d - 1) * pow(ro, n % 10);
-			}
-			printf("%.lf", b);
-		}
-	}
-	return 0;
+    int a, b, c;
+    double d;
+    double sum;
+    scanf("%d", &b);
+    c = 1;
+    for (a = 1; a <= b; a = a + 3) {
+        c++;
+        d = 1.0 / a;
+        if (c % 2 == 0) {
+            d = -d;
+        }
+        sum += d;
+    }
+    printf("sum = %d", sum);
+    return 0;
 }
