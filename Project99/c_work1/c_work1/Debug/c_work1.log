@@ -1,2 +1,4 @@
 ﻿  源.cpp
+C:\Users\Lenovo\Desktop\git_code\C_code\Project99\c_work1\c_work1\源.cpp(1811,10): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Lenovo\Desktop\git_code\C_code\Project99\c_work1\c_work1\源.cpp(1806,6): warning C4101: “piaoliang”: 未引用的局部变量
   c_work1.vcxproj -> C:\Users\Lenovo\Desktop\git_code\C_code\Project99\c_work1\Debug\c_work1.exe

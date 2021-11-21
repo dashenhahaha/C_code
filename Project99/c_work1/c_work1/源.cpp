@@ -1170,48 +1170,671 @@
 //////    return 0;
 //////}
 
+////
+////#include<stdio.h>
+////int main() {
+////    int a[9];
+////    int b;
+////    scanf("%d", &b);
+////    int c = 0;
+////    int jiluax=0;
+////    int jiluin=0;
+////    for (; c < b; c++) {
+////        scanf("%d", &a[c]);
+////    }
+////    int c1;
+////    int min=99;
+////    int max=0;
+////    
+////    for (c1=0; c1<c;c1++) {
+////        if (max < a[c1]) {
+////            max = a[c1];
+////            jiluax = c1;
+////        }
+////        if (min > a[c1]) {
+////            min = a[c1];
+////            jiluin = c1;
+////        }
+////
+////}
+////    int now = b;
+////    int m1, m2;
+////    m1 = a[0];
+////        m2 = a[b - 1];
+////        a[0] = min;
+////        a[b - 1] = max;
+////
+////    a[jiluax] = m2;
+////    a[jiluin] = m1;
+////
+////    int co = 1;
+////    printf("%d", a[0]);
+////    for (; co < now; co++)
+////    {
+////        printf(" %d", a[co]);
+////    }
+////    return 0;
+////}
+//
+//#include<stdio.h>
+//int main() {
+//	int jilu;
+//	scanf("%d", &jilu);
+//	int a1 = 0;
+//	int z[9];
+//	for (; a1 < jilu; a1++) {
+//		int hao;
+//		scanf("%d",&hao);
+//		z[a1] = hao;
+//	}
+//	int min = 999999;
+//	int xiabiao;
+//	for (a1=0;a1<jilu;a1++) {
+//		if (z[a1] < min) {
+//			min = z[a1];
+//			xiabiao = a1;
+//		}
+//		
+//	}int zancun;
+//	zancun = z[0];
+//	z[0] = min;
+//	z[xiabiao] = zancun;
+//	int max = 0;
+//	int xiabiao1;
+//	for (a1 = 0; a1 < jilu; a1++) {
+//		if (z[a1] > max) {
+//			max = z[a1];
+//			xiabiao1 = a1;
+//		}
+//	}int zancun1;
+//	zancun1 = z[a1 - 1];
+//	z[a1 - 1] = max;
+//	z[xiabiao1] = zancun1;
+//	int fax=0
+//	for(; fax < jilu; fax++) {
+//		printf("%d ", z[fax]);
+//	}
+//	return 0;
+//}
+// 
+//////#include<stdio.h>
+//////int main() {
+//////	int jilu;
+//////	scanf("%d", &jilu);
+//////	int z[9];
+//////	int x = 0;
+//////	for (;x<jilu;x++) {
+//////		int muda = 0;
+//////		scanf("%d", &muda);
+//////		z[x] = muda;
+//////
+//////	}
+//////	int cha;
+//////	scanf("%d", &cha);
+//////	if (cha < 0) {
+//////		printf("%d ", cha);
+//////		for (x = 0; x < jilu; x++) {
+//////			printf("%d ", z[x]);
+//////		}
+//////		return 0;
+//////	}
+//////	int chaxiabiao;
+//////	for (x = 0; x < jilu; x++) {
+//////		if (cha > z[x] && cha < z[x + 1]) {
+//////			chaxiabiao = x+1;
+//////		}
+//////		if (jilu == 1) {
+//////			if (z[0] > cha) {
+//////				printf("%d %d ",cha,z[0]);
+//////				return 0;
+//////			}
+//////		}
+//////	}
+//////	for (x = 0; x < jilu; x++) {
+//////		printf("%d ", z[x]);
+//////		if (chaxiabiao - x == 1) {
+//////			
+//////			break;
+//////		}
+//////	}
+//////	printf("%d ", cha);
+//////	for (; chaxiabiao < jilu; chaxiabiao++) {
+//////		printf("%d ", z[chaxiabiao]);
+//////	}
+//////	return 0;
+//////}
+////////#include<stdio.h>
+////////void cishu(int lai);
+////////int NUM[10];
+////////int main() {
+////////	int jilu = 0;
+////////	scanf("%d", &jilu);
+////////	int z[1000];
+////////	int i = 0;
+////////	for (;i<jilu;i++) {
+////////		int meiyige;
+////////		scanf("%d", &meiyige);
+////////		z[i] = meiyige;
+////////		
+////////	}for (i = 0; i < jilu; i++) {
+////////		cishu(z[i]);
+////////		
+////////	}int max = 0;
+////////	for (i=0;i<9;i++) {
+////////		if (NUM[i] > max) {
+////////			max = NUM[i];
+////////		}
+////////	}
+////////	printf("%d:", max);
+////////	for (i = 0; i <= 9; i++) {
+////////		if (max == NUM[i]) {
+////////			printf(" %d", i);
+////////		}
+////////	}
+////////
+////////	return 0;
+////////}
+////////
+////////
+////////
+////////void cishu(int lai) {
+////////	int cun;
+////////	if(lai>9){
+////////		for (;;) {
+////////			
+////////			cun = lai % 10;
+////////			lai /= 10;
+////////			NUM[cun]++;
+////////			if (lai == 0) {
+////////				break;
+////////			}
+////////		}
+////////	}
+////////	else {
+////////		cun = lai;
+////////		NUM[cun]++;
+////////		
+////////	}
+////////	
+////////}
+////#include<stdio.h>
+////int main() {
+////	int num = 0;
+////	scanf("%d", &num);
+////	int i = 0;
+////	int z[10];
+////	int zancun;
+////	for (;i<num;i++) {
+////		scanf("%d", &zancun);
+////		z[i] = zancun;
+////	}
+////	int cha[10];
+////	
+////	for (i = 0; i < num; i++) {
+////		cha[i] = z[i+1] - z[i ];
+////		
+////	}
+////	for (i = 0; i < num-1; ) {
+////	
+////			printf("%d", cha[i]);
+////			if (i == num - 2) {
+////				return 0;
+////			}
+////			++i;
+////			if (i % 3 == 0) {
+////				printf("\n");
+////				continue;
+////			}
+////		
+////		printf(" ");
+////	}
+////	
+////	return 0;
+////}
+//////#include<stdio.h>
+//////int main()
+//////{
+//////	int a[20], b[20], c[20];
+//////	int m, n, i, j, k = 0;
+//////	scanf("%d", &m);
+//////	for (i = 0; i < m; i++)
+//////		scanf("%d", &a[i]);
+//////	scanf("%d", &n);
+//////	for (i = 0; i < n; i++)
+//////		scanf("%d", &b[i]);
+//////	for (i = 0; i < m; i++) {
+//////		for (j = 0; j < n; j++) {
+//////			if (a[i] == b[j])
+//////				break;
+//////		}
+//////		if (j >= n) {
+//////			c[k] = a[i];
+//////			k++;
+//////		}
+//////	}
+//////	for (i = 0; i < n; i++) {
+//////		for (j = 0; j < m; j++) {
+//////			if (b[i] == a[j])
+//////				break;
+//////		}
+//////		if (j >= m) {
+//////			c[k] = b[i];
+//////			k++;
+//////		}
+//////	}
+//////	printf("%d", c[0]);
+//////	for (i = 1; i < k; i++) {
+//////		for (j = 0; j < i; j++) {
+//////			if (c[i] == c[j])
+//////				break;
+//////		}
+//////		if (j >= i)
+//////			printf(" %d", c[i]);
+//////	}
+//////	return 0;
+//////}
+////#include<stdio.h>
+////int main() {
+////	int sum = 0;
+////	scanf("%d", &sum);
+////	int i = 0;
+////	int a[10];
+////	int cun = 0;
+////	for (;i<sum;i++) {
+////		scanf("%d", &cun);
+////		a[i] = cun;
+////	}
+////	int b[10];
+////	int c[10];
+////	int i1 = 0;
+////	int real = 0;
+////
+////	for (i = 0; i < sum; i++) {
+////		b[real] = a[i];
+////		int daibiao = 0;
+////		for (i1 = i; i1 < sum; i1++) {
+////			if (a[i1] == a[i]) {
+////				++daibiao;
+////				c[real]=daibiao;
+////			}
+////		}
+////		real++;
+////	}
+////	int max = -999999;
+////	int code;
+////	real = 0;
+////	for (real = 0; real < sum; real++) {
+////		if (c[real] > max) {
+////			max = c[real];
+////			code = real;
+////		}
+////	}
+////	printf("%d %d", b[code], max);
+////
+////	return 0;
+////
+////}
+
+////#include<stdio.h>
+////int main() {
+////	int sum = 0;
+////	int a[10];
+////	scanf("%d", &sum);
+////	int i = 0;
+////	int cun;
+////	for (;i<sum;i++) {
+////		scanf("%d", &cun);
+////		a[i] = cun;
+////	}
+////
+////	int max = -99999;
+////	int co;
+////	for (i = 0; i < sum; i++) {
+////		if (a[i] > max) {
+////			max = a[i];
+////			co = i;
+////		}
+////	}
+////	printf("%d %d", max, co);
+////	return 0;
+////
+////
+////}
+////
+////#include<stdio.h>
+////int main() {
+////	int year, month, day;
+////	scanf("%d/%d/%d", &year, &month, &day);
+////	int allday = 0;
+////	int i = 1;
+////	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+////		for (i = 1; i < month; i++) {
+////			switch (i){
+////			case 1:
+////			case 3:
+////			case 5:
+////			case 7:
+////			case 8:
+////			case 10:
+////			case 12:
+////				allday += 31;
+////				break;
+////			case 2:
+////				allday += 28;
+////				break;
+////			case 4:
+////			case 6:
+////			case 9:
+////			case 11:
+////				allday += 30;
+////				break;
+////			}
+////
+////		
+////		}
+////
+////
+////		allday += day;
+////		printf("%d", allday);
+////		return 0;
+////
+////	}
+////	else {
+////
+////		for (i = 1; i < month; i++) {
+////			switch (i) {
+////			case 1:
+////			case 3:
+////			case 5:
+////			case 7:
+////			case 8:
+////			case 10:
+////			case 12:
+////				allday += 31;
+////				break;
+////			case 2:
+////				allday += 29;
+////				break;
+////			case 4:
+////			case 6:
+////			case 9:
+////			case 11:
+////				allday += 30;
+////				break;
+////			}
+////
+////	
+////		}
+////		allday += day;
+////		printf("%d", allday);
+////////		return 0;
+////////
+////////
+////////	}
+////////}
+////#include <stdio.h>
+////#include <math.h>
+////
+////double funcos(double e, double x);
+////
+////int main()
+////{
+////    double e, x;
+////
+////    scanf("%lf %lf", &e, &x);
+////    printf("cos(%.2f) = %.6f\n", x, funcos(e, x));
+////
+////    return 0;
+////}
+////
+////double funcos(double e, double x) {
+////    double sum = 0;
+////    double flag = -1;
+////    double now=9999;
+////    int i = 0;
+////    double ok = 90;
+////    int fenmu = 1;
+////    int fenmu1 = 1;
+////    for (; ok >= e;) {
+////        for (; ok > e; i += 2) {
+////            flag = -flag;
+////
+////            for (; fenmu1 <= i;) {
+////                fenmu *= fenmu1;
+////                fenmu1++;
+////            }
+////            now = pow(x, i) / fenmu * flag;
+////            ok = fabs(now);
+////            sum += now;
+////        }
+////
+////        
+////    }
+////    return sum;
+////}
+////
+////#include <stdio.h>
+////
+////int max(int a, int b);
+////
+////int main()
+////{
+////    int a, b;
+////
+////    scanf("%d %d", &a, &b);
+////    printf("max = %d\n", max(a, b));
+////
+////    return 0;
+////}
+////
+/////* 你的代码将被嵌在这里 */
+////int max(int a, int b) {
+////    int max;
+////    if(a>b){
+////        max = a; }
+////        if (b >= a) {
+////            max = b;
+////        }
+////    return max;
+////}
+////#include<stdio.h>
+////#include<math.h>
+////int main() {
+////	int a, b;
+////	scanf("%d %d", &a, &b);
+////	int c = fabs(a - b);
+////	printf("%d",c);
+////	return 0;
+////}
+
+////#include<stdio.h>
+////int main() {
+////	int hang;
+////	char fu;
+////	scanf("%d %c", &hang, &fu);
+////	int a = 1;
+////	int b = 1;
+////	for (; a <= hang; a++) {
+////		for (b=1;b<=a;b++) {
+////			printf("%c", fu);
+////		}
+////		printf("\n");
+////	}
+////	return 0;
+////}
+////
+////#include<stdio.h>
+////int main() {
+////	int a=1, b, c;
+////	scanf("%d", &c);
+////	for (; a <= c; a++) {
+////		for (b = 1; b <= a; b++) {
+////			printf("%dx%d=%2d",b,a,b*a);
+////			if (b < a) {
+////				printf(" ");
+////			}
+////		}
+////		printf("\n");
+////	}
+////	
+////	return 0;
+////}
+
+////#include<stdio.h>
+////#include<math.h>
+////int main() {
+////	double x,min;
+////	scanf("%lf %lf", &x, &min);
+////	double sum = 1;
+////	double now = 1;
+////	int ci = 1;
+////	double fenzi=x;
+////	double fenmu=1;
+////	for (;now>=min;ci++) {
+////		fenmu = ci * fenmu;
+////		now = 1.0 * fenzi / fenmu;
+////		sum += now;
+////		fenzi = fenzi * x;
+////		now = fabs(now);
+////	}
+////	printf("%.6lf", sum);
+////	return 0;
+////}
+////#include<stdio.h>
+////#include<math.h>
+////int main() {
+////	double a, b,x;
+////	scanf("%lf %lf", &a, &b);
+////	double a1 = fabs(a);
+////	double b1 = fabs(b);
+////	if (a1<1e-7 && b1<1e-7) {
+////		printf("Infinitely solutions");
+////	}
+////	else if (a1<1e-7) {
+////		printf("no solution");
+////	}
+////	else {
+////		x = -b / a;
+////		printf("%.3lf", x);
+////		return 0;
+////	}
+////}
+////#include<stdio.h>
+////int main() {
+////	int a, b;
+////	int on = 0;
+////	int z[10];
+////	int onon = 0;
+////	int i = 0;
+////	scanf("%d %d", &a, &b);
+////	int c = a;
+////	for (; c <= b; c++) {
+////		int chushu = 1;
+////		
+////		int sum = 0;
+////		
+////		for (; chushu < c; chushu++) {
+////			if (c % chushu == 0) {
+////				sum+= chushu;
+////				
+////			}
+////		}
+////		if (sum == c) {
+////			
+////			z[i] = c;
+////			i++;
+////			on++;
+////		}
+////		
+////
+////	}
+////
+////	if (on == 0) {
+////		printf("None");
+////		return 0;
+////	}
+////	if (on == 1) {
+////		printf("%d", z[0]);
+////	}
+////	else {
+////		printf("%d", z[0]);
+////		for (onon = 1; onon < i; onon++) {
+////			printf(" %d", z[onon]);
+////		}
+////	}
+////	return 0;
+////}
+////
+////#include<stdio.h>
+////
+////int z[50];
+////int i = 0;
+////int main() {
+////	int in = 0;
+////	int z[50];
+////	int start = 0;
+////	int ok;
+////	scanf("%d", &in);
+////	for (; in / 10 != 0;) {
+////		ok = in % 10;
+////		in = in / 10;
+////		i++; if (i==0&&ok==0) {
+////
+////		}
+////		else {
+////			printf("%d", ok);
+////		}
+////	}
+////	printf("%d",in);
+////	printf("")
+////
+////	return 0;
+////}
+
 
 #include<stdio.h>
+#include<math.h>
 int main() {
-    int a[9];
-    int b;
-    scanf("%d", &b);
-    int c = 0;
-    int jiluax=0;
-    int jiluin=0;
-    for (; c < b; c++) {
-        scanf("%d", &a[c]);
-    }
-    int c1;
-    int min=99;
-    int max=0;
-    
-    for (c1=0; c1<c;c1++) {
-        if (max < a[c1]) {
-            max = a[c1];
-            jiluax = c1;
-        }
-        if (min > a[c1]) {
-            min = a[c1];
-            jiluin = c1;
-        }
+	int a, b;
+	
+	scanf("%d %d", &a, &b);
+	int c = a;
+	int d = 0;
+	int bijiao = 0;
+	int zancun=0;
+	int rd = 0;
+	int piaoliang;
+	int nb;
+	int on = 0;
+	for (;c<=b;c++) {
+		int weishu = 1;
+		d = pow(c, 2);
+		rd = d;
+		nb = c;
+		for (; d / 10 != 0;) {
+			weishu++;
+			d = d / 10;
+		}
+		int weishu2 = 1;
+		for (; nb / 10 != 0;) {
+			weishu2++;
+			nb = nb / 10;
+		}
+		int i = 1;
+		int put = 10;
+		for (;i<weishu2;i++) {
+			put = 10 * put;
+		}
+		bijiao = rd %put;
+		if (bijiao == c) {
+			printf("%d\n",c);
+			on++;
+		}
+		
 
-}
-    int now = b;
-    int m1, m2;
-    m1 = a[0];
-        m2 = a[b - 1];
-        a[0] = min;
-        a[b - 1] = max;
-
-    a[jiluax] = m2;
-    a[jiluin] = m1;
-
-    int co = 1;
-    printf("%d", a[0]);
-    for (; co < now; co++)
-    {
-        printf(" %d", a[co]);
-    }
-    return 0;
+	}
+	if (on == 0) {
+		printf("None");
+	}
+	return 0;
 }
